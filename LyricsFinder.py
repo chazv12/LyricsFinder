@@ -16,12 +16,8 @@ scrape the lyrics via BeautifulSoup4
 """
 
 import pandas as pd
-import numpy as np
 from bs4 import BeautifulSoup
 import requests
-import json
-import time
-import urllib
 
 
 def get_spotify_data(artist_name):
@@ -66,7 +62,7 @@ def get_spotify_data(artist_name):
 
 
 def getGeniusURL(artist_name, artist_df):
-    ACCESS_TOKEN = "yzgdmuWobHrplHaxzH5MjQ0x9QzFirG8j1R3eiHmBNHtNSKxPGWvEBWwyBVd9qby"
+    ACCESS_TOKEN = ""
     # search track by track
     for album_df in artist_df.Tracks:
         album_df["Genius URL"] = None
